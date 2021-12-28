@@ -9,18 +9,19 @@ To run this application you can just use npm or if you want, yarn is another opt
 
 After npm or yarn installed (you can just have the npm) run the command bellow on your terminal to install the packages that will be used.
 
-### npm install
-### yarn
+### `npm install`
+### `yarn`
 
 Now you can run the command to start the application.
 
 With npm
-### npm start
+### `npm start`
 
 With yarn
-### yarn start
+### `yarn start`
 
-## Available Scripts
+
+## Available Scripts from the official documentation
 
 In the project directory, you can run:
 
