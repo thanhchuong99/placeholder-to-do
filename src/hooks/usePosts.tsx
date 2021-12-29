@@ -21,15 +21,12 @@ const PostsContext =  createContext<PostsContextData>({} as PostsContextData);
 
 export function PostProvider( { children }: PostsProviderProps){
     const [posts, setPosts] = useState<Post[]>([]);
-
     const { user } = useUser();
     
     useEffect(() => {
         placeholder.get(`/users/${user.userId}/posts`)
         .then(response => setPosts(response.data))
     },[user] );
-
-    console.log(posts)
 
     return (
         <PostsContext.Provider value={{posts}}>

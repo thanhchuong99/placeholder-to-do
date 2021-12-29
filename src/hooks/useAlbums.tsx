@@ -20,15 +20,12 @@ const AlbumsContext =  createContext<AlbumsContextData>({} as AlbumsContextData)
 
 export function AlbumsProvider( { children }: AlbumsProviderProps){
     const [albums, setAlbums] = useState<Album[]>([]);
-
     const { user } = useUser();
     
     useEffect(() => {
         placeholder.get(`/users/${user.userId}/albums`)
         .then(response => setAlbums(response.data))
     },[user] );
-
-    console.log(albums)
 
     return (
         <AlbumsContext.Provider value={{albums}}>

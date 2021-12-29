@@ -22,7 +22,6 @@ const TodosContext =  createContext<TodosContextData>({} as TodosContextData);
 
 export function TodoProvider( { children }: TodosProviderProps){
     const [todos, setTodos] = useState<Todo[]>([]);
-
     const { user } = useUser();
     
     useEffect(() => {
@@ -30,7 +29,6 @@ export function TodoProvider( { children }: TodosProviderProps){
         .then(response => setTodos(response.data))
     },[user] );
     
-
     async function updateTodo(todo: Todo){
         const response = await placeholder.put(`/posts/${todo.id}`, {
             ...todo,
