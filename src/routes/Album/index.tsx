@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import { useAlbums } from "../../hooks/useAlbums";
-import { Content, Container } from "./styles";
-
+import { Container, Content } from "./styles";
 export function Album() {
   const { albums } = useAlbums();
 
